@@ -1,0 +1,4 @@
+{
+  "name": "reaction_to_connector_strategy",
+  "description": "Strategy for converting Figma prototype reactions to connector lines using the output of 'get_reactions'"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "create_component_instance",
+  "description": "Create an instance of a component in Figma",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "componentKey": {
+        "type": "string",
+        "description": "Key of the component to instantiate"
+      },
+      "x": {
+        "type": "number",
+        "description": "X position"
+      },
+      "y": {
+        "type": "number",
+        "description": "Y position"
+      }
+    },
+    "required": [
+      "componentKey",
+      "x",
+      "y"
+    ],
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

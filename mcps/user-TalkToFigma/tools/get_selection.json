@@ -1,0 +1,8 @@
+{
+  "name": "get_selection",
+  "description": "Get information about the current selection in Figma",
+  "arguments": {
+    "type": "object",
+    "properties": {}
+  }
+}

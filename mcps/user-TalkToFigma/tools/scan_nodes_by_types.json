@@ -1,0 +1,25 @@
+{
+  "name": "scan_nodes_by_types",
+  "description": "Scan for child nodes with specific types in the selected Figma node",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "nodeId": {
+        "type": "string",
+        "description": "ID of the node to scan"
+      },
+      "types": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Array of node types to find in the child nodes (e.g. ['COMPONENT', 'FRAME'])"
+      }
+    },
+    "required": [
+      "nodeId",
+      "types"
+    ],
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

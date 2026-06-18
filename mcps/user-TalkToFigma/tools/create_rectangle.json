@@ -1,0 +1,40 @@
+{
+  "name": "create_rectangle",
+  "description": "Create a new rectangle in Figma",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "x": {
+        "type": "number",
+        "description": "X position"
+      },
+      "y": {
+        "type": "number",
+        "description": "Y position"
+      },
+      "width": {
+        "type": "number",
+        "description": "Width of the rectangle"
+      },
+      "height": {
+        "type": "number",
+        "description": "Height of the rectangle"
+      },
+      "name": {
+        "description": "Optional name for the rectangle",
+        "type": "string"
+      },
+      "parentId": {
+        "description": "Optional parent node ID to append the rectangle to",
+        "type": "string"
+      }
+    },
+    "required": [
+      "x",
+      "y",
+      "width",
+      "height"
+    ],
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

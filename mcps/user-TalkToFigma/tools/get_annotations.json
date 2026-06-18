@@ -1,0 +1,19 @@
+{
+  "name": "get_annotations",
+  "description": "Get all annotations in the current document or specific node",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "nodeId": {
+        "description": "Optional node ID to get annotations for specific node",
+        "type": "string"
+      },
+      "includeCategories": {
+        "default": true,
+        "description": "Whether to include category information",
+        "type": "boolean"
+      }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

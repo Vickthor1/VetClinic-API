@@ -1,0 +1,25 @@
+{
+  "name": "set_instance_overrides",
+  "description": "Apply previously copied overrides to selected component instances. Target instances will be swapped to the source component and all copied override properties will be applied.",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "sourceInstanceId": {
+        "type": "string",
+        "description": "ID of the source component instance"
+      },
+      "targetNodeIds": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Array of target instance IDs. Currently selected instances will be used."
+      }
+    },
+    "required": [
+      "sourceInstanceId",
+      "targetNodeIds"
+    ],
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

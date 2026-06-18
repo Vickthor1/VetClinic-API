@@ -1,0 +1,38 @@
+{
+  "name": "create_connections",
+  "description": "Create connections between nodes using the default connector style",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "connections": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "startNodeId": {
+              "type": "string",
+              "description": "ID of the starting node"
+            },
+            "endNodeId": {
+              "type": "string",
+              "description": "ID of the ending node"
+            },
+            "text": {
+              "description": "Optional text to display on the connector",
+              "type": "string"
+            }
+          },
+          "required": [
+            "startNodeId",
+            "endNodeId"
+          ]
+        },
+        "description": "Array of node connections to create"
+      }
+    },
+    "required": [
+      "connections"
+    ],
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

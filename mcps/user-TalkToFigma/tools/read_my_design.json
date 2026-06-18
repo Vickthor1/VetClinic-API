@@ -1,0 +1,8 @@
+{
+  "name": "read_my_design",
+  "description": "Get detailed information about the current selection in Figma, including all node details",
+  "arguments": {
+    "type": "object",
+    "properties": {}
+  }
+}

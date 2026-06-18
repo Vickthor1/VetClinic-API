@@ -1,0 +1,44 @@
+{
+  "name": "set_fill_color",
+  "description": "Set the fill color of a node in Figma can be TextNode or FrameNode",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "nodeId": {
+        "type": "string",
+        "description": "The ID of the node to modify"
+      },
+      "r": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1,
+        "description": "Red component (0-1)"
+      },
+      "g": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1,
+        "description": "Green component (0-1)"
+      },
+      "b": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1,
+        "description": "Blue component (0-1)"
+      },
+      "a": {
+        "description": "Alpha component (0-1)",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    "required": [
+      "nodeId",
+      "r",
+      "g",
+      "b"
+    ],
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "set_layout_mode",
+  "description": "Set the layout mode and wrap behavior of a frame in Figma",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "nodeId": {
+        "type": "string",
+        "description": "The ID of the frame to modify"
+      },
+      "layoutMode": {
+        "type": "string",
+        "enum": [
+          "NONE",
+          "HORIZONTAL",
+          "VERTICAL"
+        ],
+        "description": "Layout mode for the frame"
+      },
+      "layoutWrap": {
+        "description": "Whether the auto-layout frame wraps its children",
+        "type": "string",
+        "enum": [
+          "NO_WRAP",
+          "WRAP"
+        ]
+      }
+    },
+    "required": [
+      "nodeId",
+      "layoutMode"
+    ],
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

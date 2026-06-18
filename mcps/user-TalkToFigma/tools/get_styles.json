@@ -1,0 +1,8 @@
+{
+  "name": "get_styles",
+  "description": "Get all styles from the current Figma document",
+  "arguments": {
+    "type": "object",
+    "properties": {}
+  }
+}
