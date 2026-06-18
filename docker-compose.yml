@@ -19,8 +19,8 @@ services:
   api:
     build: .
     container_name: vetclinic_api
-    environment:
-      DATABASE_URL: postgresql://vetclinic:vetclinic@postgres:5432/vetclinic
+    env_file:
+      - .env
     ports:
       - "8000:8000"
     depends_on:
