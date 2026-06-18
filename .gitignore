@@ -1,0 +1,26 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+
+# Testes
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Banco local
+*.sqlite3
+
+# Sistema
+.DS_Store
+Thumbs.db
