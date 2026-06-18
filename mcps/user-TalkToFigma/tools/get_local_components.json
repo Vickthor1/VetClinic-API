@@ -1,8 +1,0 @@
-{
-  "name": "get_local_components",
-  "description": "Get all local components from the Figma document",
-  "arguments": {
-    "type": "object",
-    "properties": {}
-  }
-}

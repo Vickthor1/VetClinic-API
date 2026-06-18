@@ -1,8 +1,0 @@
-{
-  "name": "get_document_info",
-  "description": "Get detailed information about the current Figma document",
-  "arguments": {
-    "type": "object",
-    "properties": {}
-  }
-}
