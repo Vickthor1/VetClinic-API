@@ -1,76 +1,88 @@
+/* =========================
+   DESIGN SYSTEM BASE
+========================= */
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+
+  --primary: #2563eb;
+
+  --border: #e2e8f0;
+
+  --shadow: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+  margin: 0;
+}
+
+/* =========================
+   UTIL GLOBAL (BASE UI)
+========================= */
+
+h1, h2, h3 {
+  margin: 0;
+  color: var(--text);
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* =========================
+   COUNTER (chip moderno)
+========================= */
+
 .counter {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
+
   padding: 6px 12px;
   border-radius: 999px;
 
-  color: var(--accent);
-  background: var(--accent-bg);
+  background: #eef2ff;
+  color: var(--primary);
 
-  border: 1px solid transparent;
-  transition: all 0.25s ease;
+  border: 1px solid var(--border);
 
-  margin-bottom: 24px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
 
-  &:hover {
-    border-color: var(--accent-border);
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-  }
+  transition: all 0.2s ease;
 }
+
+.counter:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.counter:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   HERO (REMOVIDO DO ESTILO COMPLEXO)
+   agora simplificado tipo SaaS
+========================= */
 
 .hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .base {
-    width: 170px;
-    z-index: 0;
-    position: relative;
-  }
-
-  .framework {
-    z-index: 2;
-    top: 34px;
-    height: 28px;
-    transform: translateX(-50%)
-      perspective(2000px)
-      rotateZ(300deg)
-      rotateX(44deg)
-      rotateY(39deg)
-      scale(1.35);
-  }
-
-  .vite {
-    z-index: 1;
-    top: 107px;
-    height: 26px;
-    transform: translateX(-50%)
-      perspective(2000px)
-      rotateZ(300deg)
-      rotateX(40deg)
-      rotateY(39deg)
-      scale(0.85);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
 }
+
+/* =========================
+   CENTER (layout base)
+========================= */
 
 #center {
   display: flex;
@@ -78,144 +90,114 @@
   align-items: center;
   justify-content: center;
 
-  gap: 20px;
+  gap: 16px;
   flex-grow: 1;
 
   text-align: center;
 
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 16px;
-  }
+  padding: 24px;
 }
+
+/* =========================
+   NEXT STEPS (cards de ação)
+========================= */
 
 #next-steps {
   display: flex;
   border-top: 1px solid var(--border);
-
-  text-align: left;
-
-  & > div {
-    flex: 1;
-    padding: 32px;
-  }
-
-  .icon {
-    margin-bottom: 14px;
-    width: 22px;
-    height: 22px;
-    opacity: 0.9;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-
-    & > div {
-      padding: 24px 20px;
-    }
-  }
 }
+
+#next-steps > div {
+  flex: 1;
+  padding: 24px;
+}
+
+#next-steps .icon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   DOCS SECTION
+========================= */
 
 #docs {
   border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
 }
+
+/* =========================
+   LINKS
+========================= */
 
 #next-steps ul {
   list-style: none;
   padding: 0;
 
   display: flex;
-  gap: 10px;
-  margin: 28px 0 0;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  gap: 10px;
 
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 14px;
-    font-weight: 500;
-
-    border-radius: 10px;
-    background: var(--social-bg);
-
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    padding: 8px 12px;
-    text-decoration: none;
-
-    transition: all 0.2s ease;
-
-    &:hover {
-      box-shadow: var(--shadow);
-      transform: translateY(-1px);
-    }
-
-    &:active {
-      transform: translateY(0);
-    }
-
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-    }
-  }
+  margin-top: 20px;
 }
+
+#next-steps ul a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 12px;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  color: var(--text);
+  font-size: 14px;
+
+  transition: all 0.2s ease;
+}
+
+#next-steps ul a:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   SPACER
+========================= */
 
 #spacer {
-  height: 80px;
+  height: 64px;
   border-top: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
 }
+
+/* =========================
+   TICKS (decorativo leve)
+========================= */
 
 .ticks {
   position: relative;
   width: 100%;
+}
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -5px;
+.ticks::before,
+.ticks::after {
+  content: '';
+  position: absolute;
+  top: -4px;
 
-    border: 5px solid transparent;
-    opacity: 0.8;
-  }
+  border: 5px solid transparent;
+}
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
+.ticks::before {
+  left: 0;
+  border-left-color: var(--border);
+}
 
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
+.ticks::after {
+  right: 0;
+  border-right-color: var(--border);
 }
