@@ -8,7 +8,7 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    DATABASE_URL: str = "postgresql://vetclinic:vetclinic@localhost:5432/vetclinic"
+    DATABASE_URL: str = "postgresql+psycopg://vetclinic:vetclinic@postgres:5432/vetclinic"
     APP_NAME: str = "VetClinic API"
     APP_VERSION: str = "1.0.0"
 
